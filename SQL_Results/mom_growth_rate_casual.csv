@@ -1,0 +1,5 @@
+﻿month,current_month_rides,prev_month_rides,growth_rate_percentage
+3,80335,NULL,NULL
+4,127628,80335,58.870000000000
+5,223155,127628,74.850000000000
+6,289979,223155,29.950000000000
