@@ -29,8 +29,6 @@ This project analyzes over **5.7 million bike trips collected throughout 2024** 
 * Exploratory Data Analysis (EDA)
 * Common Table Expressions (CTEs)
 * Window Functions (ROW_NUMBER, LAG)
-* KPI & Dashboard Development
-* Business Insight Generation
 
 ---
 
