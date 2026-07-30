@@ -62,7 +62,7 @@ The dataset contains records of individual rides. Below is the description of th
 * Initial dataset contained over 5.8 million ride records.
 * ⚠️ **Note on Dataset:** Due to GitHub's file size limits, the full 5.7M row cleaned dataset is not hosted directly in this repository. 
   * A smaller sample dataset (`sample_data.csv`) is provided for code testing.
-  * *[Chèn link Google Drive hoặc Kaggle của bạn vào đây]*
+  * Link dataset: https://www.kaggle.com/datasets/camvan23/cyclistic-data-2020-cleaned*
 
 ### 2. Data Cleaning (Python)
 
