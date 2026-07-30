@@ -95,8 +95,6 @@ Interactive dashboards were created to visualize:
 * Popular stations.
 * Weekly and hourly usage behavior.
 
-*(📸 Insert Dashboard Screenshots Here)*
-
 ---
 
 ## 📊 Key Findings
