@@ -34,28 +34,48 @@ This project analyzes over **5.7 million bike trips collected throughout 2024** 
 
 ---
 
+## 🗂 Data Dictionary
+
+The dataset contains records of individual rides. Below is the description of the columns used in this analysis, including features engineered during the data cleaning process:
+
+| Column Name | Data Type | Description |
+| :--- | :--- | :--- |
+| `ride_id` | String | Unique alphanumeric identifier for each trip (Primary Key). |
+| `rideable_type` | String | Type of vehicle used (`electric_bike`, `classic_bike`, `electric_scooter`). |
+| `started_at` | Datetime | Date and time when the trip started. |
+| `ended_at` | Datetime | Date and time when the trip ended. |
+| `start_station_name` | String | Name of the station where the trip began. |
+| `start_station_id` | String | Unique identifier for the starting station. |
+| `end_station_name` | String | Name of the station where the trip ended. |
+| `end_station_id` | String | Unique identifier for the ending station. |
+| `start_lat` / `start_lng` | Float | Latitude and Longitude of the starting location. |
+| `end_lat` / `end_lng` | Float | Latitude and Longitude of the ending location. |
+| `member_casual` | String | Customer segment: `member` (annual subscriber) or `casual` (single-ride/day-pass user). |
+| **`ride_length_minutes`** | Float | *[Engineered]* Total duration of the trip in minutes. |
+| **`day_of_week`** | String | *[Engineered]* The day of the week the trip started (e.g., Monday, Tuesday). |
+| **`hour`** | Integer | *[Engineered]* The hour of the day the trip started (0-23 format). |
+
+---
+
 ## ⚙️ Data Processing Workflow
 
-### 1. Data Collection
-
+### 1. Data Collection & Access
 * Combined 12 monthly Divvy trip datasets from 2024.
 * Initial dataset contained over 5.8 million ride records.
+* ⚠️ **Note on Dataset:** Due to GitHub's file size limits, the full 5.7M row cleaned dataset is not hosted directly in this repository. 
+  * A smaller sample dataset (`sample_data.csv`) is provided for code testing.
+  * *[Chèn link Google Drive hoặc Kaggle của bạn vào đây]*
 
 ### 2. Data Cleaning (Python)
 
 Key cleaning steps included:
 
 * Merging monthly datasets.
-* Handling missing station information.
+* Handling missing station information (filling with 'On Street - Dockless').
 * Removing records with missing coordinates.
-* Removing invalid ride durations.
+* Removing invalid ride durations (<= 0 and < 1 minute).
 * Eliminating duplicate ride IDs.
-* Creating analytical features such as:
-
-  * Ride Duration
-  * Day of Week
-  * Month
-  * Hour of Day
+* Creating analytical features (`ride_length_minutes`, `day_of_week`, `hour`).
 
 ### 3. Data Analysis (SQL Server)
 
@@ -78,6 +98,8 @@ Interactive dashboards were created to visualize:
 * Popular stations.
 * Weekly and hourly usage behavior.
 
+*(📸 Insert Dashboard Screenshots Here)*
+
 ---
 
 ## 📊 Key Findings
@@ -86,7 +108,6 @@ Interactive dashboards were created to visualize:
 
 * Members accounted for approximately 63.6% of total trips.
 * Average ride duration:
-
   * Members: 12.4 minutes
   * Casual Riders: 21.7 minutes
 
