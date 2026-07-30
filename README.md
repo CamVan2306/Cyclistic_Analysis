@@ -49,9 +49,9 @@ The dataset contains records of individual rides. Below is the description of th
 | `start_lat` / `start_lng` | Float | Latitude and Longitude of the starting location. |
 | `end_lat` / `end_lng` | Float | Latitude and Longitude of the ending location. |
 | `member_casual` | String | Customer segment: `member` (annual subscriber) or `casual` (single-ride/day-pass user). |
-| **`ride_length_minutes`** | Float | *[Engineered]* Total duration of the trip in minutes. |
-| **`day_of_week`** | String | *[Engineered]* The day of the week the trip started (e.g., Monday, Tuesday). |
-| **`hour`** | Integer | *[Engineered]* The hour of the day the trip started (0-23 format). |
+| **`ride_length_minutes`** | Float | Total duration of the trip in minutes. |
+| **`day_of_week`** | String | The day of the week the trip started (e.g., Monday, Tuesday). |
+| **`hour`** | Integer | The hour of the day the trip started (0-23 format). |
 
 ---
 
